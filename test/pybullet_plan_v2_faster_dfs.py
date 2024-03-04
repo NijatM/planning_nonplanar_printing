@@ -39,7 +39,7 @@ avoid_collision = True  # Normally True, False only for debugging
 plane_rotation_steps_first_target = 10
 plane_rotation_steps = 50  # Higher number for more accurate search
 # 0.7 seems to work fine. If plane_rotation_steps is reduced, this value should be increased
-jump_tolerance = 0.7
+jump_tolerance = 0.9
 
 # ---------------------
 # Folder and File Paths
@@ -257,6 +257,11 @@ def run_normal(save=True, replay=True):
     start_time = time.time()  # Start time
     complete_plan = plan_all_movements_with_initial_config(
         pp, client, robot, tool, movements)
+
+    # Trajectories
+    for i in range(len(movements)):
+        movement = movements[i]
+        movement.trajectory = [complete_plan[i]]
 
     if complete_plan is not None:
         print("Complete Plan is found, total time: %.2f seconds" %

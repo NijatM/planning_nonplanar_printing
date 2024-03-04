@@ -9,7 +9,7 @@ from compas_fab.robots import to_degrees
 from npp.tasks import PlanningProblem, Task, RoboticFreeMovement, RoboticLinearMovement, AirAssistOn, AirAssistOff, ExtruderOn, ExtruderOff
 
 PATH = os.path.dirname(os.path.abspath(__file__))
-FILE_NAME = 'test/design/PlanningResult/planning_result_231010_AutomatedPathes_VariableSpeed_V1.json'
+FILE_NAME = 'test/design/PlanningResult/planning_result_240226_PathPlanning_BioPrint901__LatticeStudy_V2_Small.json'
 # FILE_NAME = 'test/design/PlanningResult/planning_result_230907_Cake_V3_Part7_Rev.json'
 # FILE_NAME = 'test/design/PlanningResult/planning_result_230903_BacPrint_Block_V2.json'
 
